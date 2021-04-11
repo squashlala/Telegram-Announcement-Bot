@@ -1,3 +1,4 @@
+#Python3.9 
 import subprocess
 from datetime import datetime
 from telegram import Update, Chat, Bot, Message   #Importting elements from the telegram-python-bot (to install them use in a cli "pip install python-telegram-bot")
@@ -5,8 +6,7 @@ from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, Callb
 
 str1=' ' #Used for parsing
 
-helpMessage = """Bonjour humain ou anthropomorphe!
-Je suis le robot qui permet d'annoncer les évènements dans "Some Channel".
+helpMessage = """Je suis le robot qui permet d'annoncer les évènements dans "Some Channel".
 Si tu veux faire connaitre le tiens tape dans le groupe : "/annonce [ton évènement]"
 
 Merci de le mettre sous cette forme (tout messages ne respectant pas la mise en forme serront refusés):
