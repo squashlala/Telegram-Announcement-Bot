@@ -55,11 +55,11 @@ def help(update: Update, context: CallbackContext) -> None:
     if update.message.chat.id in chatsID:   #If the /help comes from an allowed chat the help is displayed
         update.message.reply_text(helpMessage)
     else :   #Otherwise, the sender is notified he can't use the bot
-        update.message.reply_text("L'utilisation de ce bot est réservé à des groupes spéciques.\nNéanmoins son code sera rendu disponible prochainement.")
+        update.message.reply_text("L'utilisation de ce bot est réservé à des groupes spéciques.\nNéanmoins son code sera est trouvable ici : https://github.com/squashlala/Telegram-Announcement-Bot")
         context.bot.send_message(chat_id=logChannel,text="ID du channel demandeur d'aide : "+update.message.chat.id)   #The use is logged
 
 
-updater=Updater('your bot token')   #Here we ggive the bot API tokens
+updater=Updater('[your bot token]')   #Here we ggive the bot API tokens
 
 updater.dispatcher.add_handler(CommandHandler('annonce', announce))   #If the /annonce command is received, we use the announce def
 updater.dispatcher.add_handler(CommandHandler('aide', help))   #If the /aide command is received, we use the help def
